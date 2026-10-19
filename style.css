@@ -71,3 +71,7 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 /* No blur/fade at the bottom of the hero image. */
 .hero-shade::after{content:none;display:none}
 @media(prefers-reduced-motion:reduce){.content-shell::after{animation:none}}
+
+/* Social links: same text size as the "ЧИТАТЬ СТАТЬЮ" link. */
+.social-grid>a{font-size:clamp(13px,1.3vw,20px)}
+@media(max-width:750px){.social-grid>a{font-size:clamp(13px,1.3vw,20px)}}
