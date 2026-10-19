@@ -29,3 +29,8 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 .subscribe{overflow:hidden}
 .subscribe .bottom-star{width:360px;height:360px;right:-65px;top:-55px}
 @media(max-width:750px){.subscribe .bottom-star{width:230px;height:230px;right:-55px;top:-35px}}
+
+/* Keep the complete hero title visible in the first viewport. */
+.hero{height:calc(100svh - 76px);min-height:0;max-height:none}
+.hero h1{bottom:clamp(28px,5vh,65px);font-size:clamp(36px,min(6.1vw,10.2vh),112px);line-height:1.02}
+@media(max-width:750px){.hero{height:calc(100svh - 64px);min-height:0}.hero h1{bottom:24px;font-size:clamp(30px,min(8.2vw,8.4vh),66px)}}
