@@ -23,3 +23,9 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 .subscribe .bottom-star{position:absolute;z-index:1;right:-105px;top:-85px;width:540px;height:540px;display:block;pointer-events:none;overflow:visible}
 .subscribe .bottom-star img{display:block;width:100%;height:100%;max-height:none;max-width:none;object-fit:contain}
 @media(max-width:750px){.subscribe .bottom-star{display:block;right:-110px;top:-55px;width:310px;height:310px}.subscribe .bottom-star img{width:100%;height:100%;max-height:none}.subscribe>div:first-child,.subscribe form{max-width:75%}}
+
+/* Footer refinements */
+.subscribe h2{letter-spacing:0.04em}
+.subscribe{overflow:hidden}
+.subscribe .bottom-star{width:360px;height:360px;right:-65px;top:-55px}
+@media(max-width:750px){.subscribe .bottom-star{width:230px;height:230px;right:-55px;top:-35px}}
