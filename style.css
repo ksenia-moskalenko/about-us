@@ -7,3 +7,8 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 .nav .star{display:flex;align-items:center;justify-content:center;width:75px;height:75px;flex:0 0 75px;transform:none;text-shadow:none;font-size:0}
 .nav .star svg{display:block;width:75px;height:75px;max-width:none}
 @media(max-width:750px){.nav .star{width:60px;height:60px;flex-basis:60px}.nav .star svg{width:60px;height:60px}}
+
+/* Supplied bottom-right SVG, replacing the text glyph. */
+.subscribe .bottom-star{display:flex;align-items:center;justify-content:center;transform:none;font-size:0;text-shadow:none;overflow:visible}
+.subscribe .bottom-star img{display:block;width:min(100%,260px);height:auto;max-height:210px;object-fit:contain}
+@media(max-width:750px){.subscribe .bottom-star{display:flex;justify-content:flex-end}.subscribe .bottom-star img{width:140px}}
