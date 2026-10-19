@@ -59,3 +59,15 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 .content-shell{background:#121212}
 .content-shell::before{content:"";position:absolute;top:0;left:0;right:0;height:115px;pointer-events:none;z-index:0;background:linear-gradient(to bottom,#121212,rgba(18,18,18,0))}
 @media(prefers-reduced-motion:reduce){.about::before,.about .spark-panel,.about .spark-trail{animation:none}}
+
+/* Requested: glow anchored to the right edge and extended down to FAQ divider. */
+.about::before{display:none}
+.about .spark-panel{display:none}
+.content-shell{isolation:isolate}
+.content-shell::after{content:"";position:absolute;z-index:0;top:0;right:0;left:auto;width:65%;height:calc(340px + 60px + 180px);pointer-events:none;background:radial-gradient(ellipse 90% 66% at 100% 48%,rgba(169,68,140,.28),rgba(96,36,81,.12) 55%,transparent 100%);animation:right-edge-glow 12s ease-in-out infinite alternate}
+.content-shell .editorial,.content-shell .faq{position:relative;z-index:1}
+@keyframes right-edge-glow{from{opacity:.7;filter:brightness(.9)}to{opacity:1;filter:brightness(1.22)}}
+@media(max-width:750px){.content-shell::after{width:85%;height:650px}}
+/* No blur/fade at the bottom of the hero image. */
+.hero-shade::after{content:none;display:none}
+@media(prefers-reduced-motion:reduce){.content-shell::after{animation:none}}
