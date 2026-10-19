@@ -12,3 +12,7 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 .subscribe .bottom-star{display:flex;align-items:center;justify-content:center;transform:none;font-size:0;text-shadow:none;overflow:visible}
 .subscribe .bottom-star img{display:block;width:min(100%,260px);height:auto;max-height:210px;object-fit:contain}
 @media(max-width:750px){.subscribe .bottom-star{display:flex;justify-content:flex-end}.subscribe .bottom-star img{width:140px}}
+
+/* Consistent supplied arrow asset across all links and actions. */
+.arrow-icon{display:inline-block;width:1.25em;height:1.25em;object-fit:contain;vertical-align:-.19em;flex-shrink:0}
+.subscribe button .arrow-icon{width:1.2em;height:1.2em;filter:brightness(0) invert(1)}
