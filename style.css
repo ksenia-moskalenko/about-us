@@ -44,3 +44,18 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 
 /* Gentle additional blur over the top edge of the hero collage. */
 .hero-shade::before{content:"";position:absolute;top:0;left:0;right:0;height:24%;pointer-events:none;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);-webkit-mask-image:linear-gradient(to bottom,#000 0%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,transparent 100%)}
+
+/* Animated violet glow in the About section, based on the supplied gradient reference. */
+.about{position:relative;isolation:isolate}
+.about::before{content:"";position:absolute;inset:-110px 0 -90px 0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 48% 70% at 85% 55%,rgba(161,65,135,.23),transparent 78%),radial-gradient(ellipse 55% 55% at 60% 95%,rgba(115,43,97,.13),transparent 78%);animation:about-glow-drift 11s ease-in-out infinite alternate;will-change:transform,opacity}
+.about .spark-panel{width:36%;background:radial-gradient(ellipse at 90% 45%,rgba(225,74,174,.16),transparent 75%);animation:about-glow-breathe 8s ease-in-out infinite alternate}
+.about .spark-trail{top:38%;left:-45%;width:175%;height:2px;transform:rotate(-12deg);background:linear-gradient(90deg,transparent,rgba(235,95,213,.08) 22%,rgba(235,95,213,.32) 65%,transparent);box-shadow:0 0 22px 5px rgba(227,79,193,.14);transform-origin:center;animation:about-trail-drift 13s ease-in-out infinite alternate}
+@keyframes about-glow-drift{from{transform:translate3d(-3%,2%,0) scale(1);opacity:.72}to{transform:translate3d(3%,-4%,0) scale(1.12);opacity:1}}
+@keyframes about-glow-breathe{from{opacity:.55;transform:translateX(-3%)}to{opacity:1;transform:translateX(3%)}}
+@keyframes about-trail-drift{from{transform:translate(-4%,10px) rotate(-12deg);opacity:.48}to{transform:translate(4%,-10px) rotate(-12deg);opacity:.95}}
+/* Seamless blend from the bottom of the photo to the animated dark section. */
+.hero{z-index:1}
+.hero-shade::after{height:50%;background:linear-gradient(to bottom,transparent 0%,rgba(18,18,18,.08) 24%,rgba(18,18,18,.48) 64%,#121212 100%)}
+.content-shell{background:#121212}
+.content-shell::before{content:"";position:absolute;top:0;left:0;right:0;height:115px;pointer-events:none;z-index:0;background:linear-gradient(to bottom,#121212,rgba(18,18,18,0))}
+@media(prefers-reduced-motion:reduce){.about::before,.about .spark-panel,.about .spark-trail{animation:none}}
