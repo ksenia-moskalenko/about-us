@@ -34,3 +34,7 @@ h1,h2,.faq-title,.nav nav a,.side-label,.featured-bottom,.social-grid>a,.subscri
 .hero{height:calc(100svh - 76px);min-height:0;max-height:none}
 .hero h1{bottom:clamp(28px,5vh,65px);font-size:clamp(36px,min(6.1vw,10.2vh),112px);line-height:1.02}
 @media(max-width:750px){.hero{height:calc(100svh - 64px);min-height:0}.hero h1{bottom:24px;font-size:clamp(30px,min(8.2vw,8.4vh),66px)}}
+
+/* Blur the bottom of the hero photograph as it fades into the next section. */
+.hero-shade{pointer-events:none}
+.hero-shade::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(to bottom,transparent 0%,rgba(18,18,18,.08) 25%,rgba(18,18,18,.55) 72%,#121212 100%);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 65%);mask-image:linear-gradient(to bottom,transparent,#000 65%)}
